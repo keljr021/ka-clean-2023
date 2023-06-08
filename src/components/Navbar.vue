@@ -1,19 +1,131 @@
 <template>
     <div class="navbar">
-        Navbar Here
+
+        <!-- Mobile Navigation -->
+        <div class="nav w-100" :class="{'show': showNav }" v-if="$vuetify.display.smAndDown">
+            <v-row class="align-center justify-space-between">
+                <v-col cols="8" class="nav-logo" @click="this.$emit('scrollTo', 'cta')">
+                    <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
+                </v-col>
+                <v-col cols="4" class="text-right">
+                    <v-icon @click.stop="toggleNavDrawer">mdi-menu</v-icon>
+                    <v-navigation-drawer v-model="showNavDrawer" location="right">
+                        <v-list-item>
+                            <template v-slot:append>
+                                <v-icon @click.stop="toggleNavDrawer">mdi-close</v-icon>
+                            </template>
+                        </v-list-item>
+                        <v-list density="compact" nav>
+                            <v-list-item title="Services" value="services" @click.stop="this.$emit('scrollTo', navItem.className);toggleNavDrawer()"></v-list-item>
+                        </v-list>
+                    </v-navigation-drawer>
+                </v-col>
+            </v-row>
+        </div>
+
+        <!-- Tablet/Desktop navigation -->
+        <div class="nav w-100" :class="{'show': showNav }" v-else>
+            <v-row class="align-center">
+                <v-col cols="3" class="nav-logo" @click="this.$emit('scroll-to', 'cta')">
+                    <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
+                </v-col>
+                <v-col cols="9" class="text-right">
+                    <v-list-item title="Services" value="services" @click.stop="this.$emit('scrollTo', 'services');toggleNavDrawer()"></v-list-item>
+                    <v-list-item title="Areas We Cover" value="areas" @click.stop="this.$emit('scrollTo', 'areas');toggleNavDrawer()"></v-list-item>
+                    <v-list-item title="About" value="about" @click.stop="this.$emit('scrollTo', 'about');toggleNavDrawer()"></v-list-item>
+                    <v-list-item title="Contact" value="contact" @click.stop="this.$emit('scrollTo', 'contact');toggleNavDrawer()"></v-list-item>
+                </v-col>
+            </v-row>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'navbar'
+    name: 'Navbar',
+    data() {
+        return {
+            showNav: false,
+            showNavDrawer: false
+        };
+    },
+    emits: [
+        'scrollTo'
+    ],
+    methods: {
+        toggleNavDrawer() {
+            this.showNavDrawer = !this.showNavDrawer;
+        },
+        checkToShowNavbar() {
+            // Get the current scroll position
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+            if (currentScrollPosition < 0) 
+            return false;
+
+            // Here we determine whether we need to show or hide the navbar
+            this.showNav = currentScrollPosition >= 300;    
+       }
+    },
+    mounted() {
+        if (!this.$vuetify.display.xs) {
+            this.checkToShowNavbar();
+            window.addEventListener('scroll', this.checkToShowNavbar)
+        } else {
+            this.showNav = true;
+        }
+    },
+    beforeUnmount () {
+        if (!this.$vuetify.display.xs)
+            window.removeEventListener('scroll', this.checkToShowNavbar)
+    },
 }
 </script>
 
-<style>
-.navbar {
-    height: 30px;
-    background: white;
-    color: black;
+<style lang="scss">
+.nav {
+    background:white;
+    // position: fixed;
+    z-index: 1;
+    top: -42px;
+    transition: top 0.3s;
+
+    &.show {
+        top: 0 !important;
+    }
+}
+
+.nav-logo {
+    padding: 3px 20px;
+    cursor: pointer;
+
+    img {
+        height: 26px;
+    }
+}
+
+.nav-item {
+    padding: 0 20px;
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.8;
+
+    &:hover {
+       opacity: 1;
+    }
+}
+
+:deep(.v-list-item--nav .v-list-item-title) {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    padding: 10px 0;
+}
+
+@media all and (max-width: 768px) {
+    .nav-logo {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 </style>

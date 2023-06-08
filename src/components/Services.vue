@@ -1,16 +1,34 @@
 <template>
-    <div class="page-section">
+    <div class="page-section" id="services">
+        <v-container fluid>
         Services Here
+
+        <v-row>
+            <v-col>
+                <ServiceCard />
+            </v-col>
+            <v-col>
+                <ServiceCard />
+            </v-col>
+            <v-col>
+                <ServiceCard />
+            </v-col>
+        </v-row>
+        </v-container>
     </div>
 </template>
 
 <script>
+import ServiceCard from './ServiceCard.vue'
 export default {
-    name: 'services'
+    name: 'Services',
+    components: {
+        ServiceCard
+    }
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .page-section {
     background: #ccc;
 }

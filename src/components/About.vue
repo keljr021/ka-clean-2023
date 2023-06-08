@@ -1,5 +1,5 @@
 <template>
-    <div class="page-section">
+    <div class="page-section" id="about">
         About Here
     </div>
 </template>
@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .page-section {
     background: #666;
     color: white;

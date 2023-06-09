@@ -30,10 +30,10 @@
                     <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
                 </v-col>
                 <v-col cols="9" class="text-right">
-                    <v-list-item title="Services" value="services" @click.stop="this.$emit('scrollTo', 'services');toggleNavDrawer()"></v-list-item>
-                    <v-list-item title="Areas We Cover" value="areas" @click.stop="this.$emit('scrollTo', 'areas');toggleNavDrawer()"></v-list-item>
-                    <v-list-item title="About" value="about" @click.stop="this.$emit('scrollTo', 'about');toggleNavDrawer()"></v-list-item>
-                    <v-list-item title="Contact" value="contact" @click.stop="this.$emit('scrollTo', 'contact');toggleNavDrawer()"></v-list-item>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'services');toggleNavDrawer()">Services</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'areas');toggleNavDrawer()">Areas We Cover</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'about');toggleNavDrawer()">About</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'contact');toggleNavDrawer()">Contact</span>
                 </v-col>
             </v-row>
         </div>
@@ -65,7 +65,7 @@ export default {
             return false;
 
             // Here we determine whether we need to show or hide the navbar
-            this.showNav = currentScrollPosition >= 300;    
+            this.showNav = currentScrollPosition >= 600;    
        }
     },
     mounted() {
@@ -86,9 +86,9 @@ export default {
 <style lang="scss">
 .nav {
     background:white;
-    // position: fixed;
-    z-index: 1;
-    top: -42px;
+    position: fixed;
+    z-index: 9999;
+    top: -65px;
     transition: top 0.3s;
 
     &.show {
@@ -97,29 +97,22 @@ export default {
 }
 
 .nav-logo {
-    padding: 3px 20px;
+    padding: 0 20px !important;
     cursor: pointer;
 
     img {
-        height: 26px;
+        height: 55px;
     }
 }
 
 .nav-item {
     padding: 0 20px;
-    cursor: pointer;
-    text-align: center;
     opacity: 0.8;
+    cursor: pointer;
 
     &:hover {
        opacity: 1;
     }
-}
-
-:deep(.v-list-item--nav .v-list-item-title) {
-    font-size: 18px !important;
-    font-weight: 300 !important;
-    padding: 10px 0;
 }
 
 @media all and (max-width: 768px) {

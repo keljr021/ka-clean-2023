@@ -70,10 +70,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.page-section {
-    background: #ccc;
-}
-
 .page-border {
     border-top: none;
     border-right: none;

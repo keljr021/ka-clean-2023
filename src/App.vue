@@ -1,9 +1,9 @@
 <template>
   <!-- <Navbar @scroll-to="scrollTo" /> -->
   <Cta @scroll-to="scrollTo" />
-  <Services @scroll-to="scrollTo" />
-  <About @scroll-to="scrollTo"/>
-  <Contact @scroll-to="scrollTo"/>
+  <Services />
+  <About/>
+  <Contact @scroll-to="scrollTo" @open-form="openContactForm"/>
   <Footbar />
 </template>
 
@@ -20,6 +20,9 @@ export default {
     scrollTo(input) {
       let el = document.getElementsByClassName(input)[0];
       if(el) el.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    },
+    openContactForm() {
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?usp=pp_url','_blank')
     }
   },
   mounted() {
@@ -44,7 +47,6 @@ div, p {
 }
 
 .page-section {
-  min-height: 500px;
   padding: 50px 0;
   background: #F6F6F6;
 }

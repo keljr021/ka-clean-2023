@@ -22,10 +22,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.service-card {
-    background: #ccc;
-}
-
 .service-card-icon {
     font-size: 60px;
     color: #464DA0

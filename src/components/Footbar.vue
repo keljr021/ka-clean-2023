@@ -1,5 +1,5 @@
 <template>
-    <div class="footbar py-1 px-4">
+    <div class="footbar px-4">
         <div class="text-right">Website provided by <a href="http://kelvin-m.com" target="_blank">Kelvin Morrisey Jr.</a></div>
     </div>
 </template>
@@ -21,7 +21,6 @@ export default {
         color: #666;
 
         &:hover {
-            text-decoration: underline;
             color: #ccc;
         }
     }

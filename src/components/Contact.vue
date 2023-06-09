@@ -20,7 +20,8 @@
                     Fill out our <b>Contact Form </b><br />
                     
                     <div class="py-3">
-                        <v-btn>
+                        <v-btn color="#464DA0" size="large" ripple @click="this.$emit('openForm')">
+                            <v-icon class="px-5">fas fa-file-lines</v-icon>
                             Open Contact Form
                         </v-btn>
                     </div>
@@ -36,16 +37,20 @@
 
 <script>
 export default {
-    name: 'Contact'
+    name: 'Contact',
+    emits: [
+        'openForm'
+    ]
 }
 </script>
 
 <style scoped lang="scss">
 .contact {
-    background: #333;
-    color: white;
-
     a {
+        color: black;
+    }
+
+    :deep(.v-btn) {
         color: white;
     }
 }

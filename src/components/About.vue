@@ -33,7 +33,7 @@ export default {
 
 <style scoped lang="scss">
 .about {
-    background: #666;
+    background: #1D2352;
     color: white;
 
     ul {

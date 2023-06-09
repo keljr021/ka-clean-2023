@@ -1,6 +1,6 @@
 <template>
     <div class="page-section about">
-        <v-container>
+        <v-container class="about-text">
             <v-row>
                 <v-col class="page-section-title py-6">About</v-col>
             </v-row>
@@ -32,23 +32,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.page-section {
+    color: white;
+}
 .about {
     position: relative; 
     width: 100%;
     background-image: url('@/assets/cleaning-supply-wood.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
     z-index: 1;
 
-    &:after {
+    &:before {
         content: "";
         position: absolute;
         top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;
-        background-color: rgba(29, 35, 82, 0.65);
+        background: rgba(29, 35, 82, 0.65);
+    }
+
+    .about-text {
+        position: relative;
+        z-index: 1;
     }
 
     ul {

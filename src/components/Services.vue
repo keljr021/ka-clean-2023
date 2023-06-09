@@ -52,19 +52,19 @@
         <v-row>
             <v-col cols="4" offset="4" class="py-8 page-border">&nbsp;</v-col>
         </v-row>
-        <areas-we-serve />
+        <areas-we-cover />
         </v-container>
     </div>
 </template>
 
 <script>
 import ServiceCard from './ServiceCard.vue'
-import AreasWeServe from './AreasWeServe.vue';
+import AreasWeCover from './AreasWeCover.vue';
 export default {
     name: 'Services',
     components: {
         ServiceCard,
-        AreasWeServe
+        AreasWeCover
     }
 }
 </script>

@@ -6,7 +6,7 @@
             </v-row>
             <v-row>
                 <v-col>
-                    <p class="py-3">Morrisey Cleaning Services was first created by founders Thurman and Linda Morrisey. With their dedication and hard-work, both have garnished a positive reputation for their expertise in the janitorial business for decades.</p>
+                    <p class="py-3"><b>Morrisey Cleaning Services</b> was first created by founders Thurman and Linda Morrisey. With their dedication and hard-work, both have garnished a positive reputation for their expertise in the janitorial business for decades.</p>
                     <p class="py-3">Today, their ethics and values were passed down to their son and his wife Kelvin and Amy Morrisey. Along with their hard-working technicians; they are equipped with the experience to take on any commercial cleaning service for their customers.</p>
                 </v-col>
                 <v-col>
@@ -42,6 +42,7 @@ export default {
     background-size: cover;
     background-position: center;
     z-index: 1;
+    font-weight: normal;
 
     &:before {
         content: "";
@@ -50,7 +51,7 @@ export default {
         right: 0px;
         bottom: 0px;
         left: 0px;
-        background: rgba(29, 35, 82, 0.65);
+        background: rgba(29, 35, 82, 0.75);
     }
 
     .about-text {

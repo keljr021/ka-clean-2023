@@ -2,7 +2,7 @@
     <div class="areas">
         <v-container>
             <v-row>
-                <v-col class="page-section-title py-6">Areas We Serve</v-col>
+                <v-col class="page-section-title py-6">Areas We Cover</v-col>
             </v-row>
             <v-row>
                 <v-col>
@@ -46,7 +46,7 @@
 
 <script>
 export default {
-    name: 'AreasWeServe'
+    name: 'AreasWeCover'
 }
 </script>
 

@@ -33,8 +33,23 @@ export default {
 
 <style scoped lang="scss">
 .about {
-    background: #1D2352;
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    background-image: url('@/assets/cleaning-supply-wood.jpg');
+    background-size: cover;
     color: white;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(29, 35, 82, 0.65);
+    }
 
     ul {
         padding-left: 20px;

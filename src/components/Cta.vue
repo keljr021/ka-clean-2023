@@ -1,4 +1,5 @@
 <template>
+    <img class="cta-background" :src="getBg()" alt="cta" />
     <div class="page-section cta">
         <v-container>
             <v-col cols="6" offset="3" class="text-center">
@@ -32,23 +33,44 @@ export default {
     name: 'Cta',
     emits: [
         'scrollTo'
-    ]
+    ],
+    methods: {
+        getBg() {
+            return new URL('../assets/desk-cleaning.jpg', import.meta.url).href;
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
 .page-section {
     height: 100vh;
-    background: #1D2352;
     color: white;
 }
 
+.cta-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    z-index: -1;
+}
+
 .cta {
+    position: relative;
+    height: 100%;
+    background: rgba(29, 35, 82, 0.65);
+    -webkit-border-radius: 0;
+    border-radius: 0;
     font-size: 1.25em;
+    z-index: 0;
 
     p {
         line-height: 1.25;
     }
+
     .cta-logo img {
         height: 125px;
     }

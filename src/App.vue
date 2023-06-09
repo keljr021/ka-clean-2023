@@ -49,6 +49,7 @@ div, p {
 .page-section {
   padding: 50px 0;
   background: #F6F6F6;
+  z-index: 1;
 }
 
 .page-section-title {

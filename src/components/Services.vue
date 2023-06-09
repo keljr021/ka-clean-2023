@@ -70,10 +70,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.page-border {
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid #666;
-    border-left: none;
+.services {
+    background: #F6F6F6;
+
+    .page-border {
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid #666;
+        border-left: none;
+    }
 }
 </style>

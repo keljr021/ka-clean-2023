@@ -2,7 +2,7 @@
     <img class="cta-background" :src="getBg()" alt="cta" />
     <div class="page-section cta">
         <v-container>
-            <v-col cols="6" offset="3" class="text-center">
+            <v-col cols="8" offset="2" class="text-center">
                 <div class="cta-logo py-4">
                     <img src="../assets/logo-white.png" alt="K&A Morrisey Cleaning Services" />
                 </div>
@@ -10,7 +10,7 @@
                     <p class="py-2">We're a family-owned business of professional cleaning technicians. With over twenty years experience, K&A Morrisey Cleaning Services have the expertise on all commercial cleaning needs.</p>
                     <p class="py-2">There are no jobs too big or too small!</p>
                 </div>
-                <div class="cta-links py-8">
+                <div class="cta-links py-8 pl-2">
                     <v-row class="justify-space-between">
                         <v-col>
                             <div class="text-center px-2" @click="this.$emit('scrollTo', 'services')">Services</div>
@@ -45,7 +45,7 @@ export default {
 <style scoped lang="scss">
 .page-section {
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     padding-left: 0;
     padding-right: 0;
     color: white;

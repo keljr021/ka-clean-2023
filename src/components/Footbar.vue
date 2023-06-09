@@ -1,19 +1,29 @@
 <template>
-    <div class="footbar">
-        Footer Here
+    <div class="footbar py-1 px-4">
+        <div class="text-right">Website provided by <a href="http://kelvin-m.com" target="_blank">Kelvin Morrisey Jr.</a></div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'footbar'
+    name: 'Footbar'
 }
 </script>
 
-<style>
+<style lang="scss">
 .footbar {
     height: 30px;
     background: black;
-    color: #999;
+    color: #666;
+
+    a {
+        text-decoration: none;
+        color: #666;
+
+        &:hover {
+            text-decoration: underline;
+            color: #ccc;
+        }
+    }
 }
 </style>

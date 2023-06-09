@@ -10,7 +10,7 @@
                     <p class="py-3">Today, their ethics and values were passed down to their son and his wife Kelvin and Amy Morrisey. Along with their hard-working technicians; they are equipped with the experience to take on any commercial cleaning service for their customers.</p>
                 </v-col>
                 <v-col>
-                    <div class="py-3">Why Choose Us?</div>
+                    <div class="page-section-subtitle py-3">Why Choose Us?</div>
                     <ul class="py-3">
                         <li>North Carolina owned business local to Sampson County</li>
                         <li>Over two decades of janitorial experience</li>

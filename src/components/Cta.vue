@@ -44,7 +44,10 @@ export default {
 
 <style scoped lang="scss">
 .page-section {
-    height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
     color: white;
 }
 
@@ -64,11 +67,12 @@ export default {
     background: rgba(29, 35, 82, 0.65);
     -webkit-border-radius: 0;
     border-radius: 0;
-    font-size: 1.25em;
+    font-family: 'Carlito', 'Roboto', sans-serif;
+    font-size: 24px;
     z-index: 0;
 
     p {
-        line-height: 1.25;
+        line-height: 55px;
     }
 
     .cta-logo img {

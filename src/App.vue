@@ -53,10 +53,11 @@ div, p {
 }
 
 .page-section-title {
-  font-size: 24px;
+  font-family: 'Carlito', 'Roboto', sans-serif;
+  font-size: 30px;
 }
 
 .page-section-subtitle {
-  font-size: 18px;
+  font-size: 24px;
 }
 </style>

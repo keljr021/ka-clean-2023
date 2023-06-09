@@ -88,7 +88,7 @@ export default {
     background:white;
     position: fixed;
     z-index: 9999;
-    top: -65px;
+    top: -70px;
     transition: top 0.3s;
 
     &.show {
@@ -102,6 +102,7 @@ export default {
 
     img {
         height: 55px;
+        margin: 10px 0;
     }
 }
 

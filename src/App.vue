@@ -2,9 +2,10 @@
   <Navbar @scroll-to="scrollTo" />
   <Cta @scroll-to="scrollTo" />
   <Services />
-  <About/>
+  <About />
   <Contact @scroll-to="scrollTo" @open-form="openContactForm"/>
   <Footbar />
+  <FixedMenu />
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import Services from './components/Services.vue'
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import Footbar from './components/Footbar.vue'
+import FixedMenu from './components/FixedMenu.vue'
 export default {
   name: 'app',
   methods: {
@@ -36,7 +38,8 @@ export default {
     Services,
     About,
     Contact,
-    Footbar
+    Footbar,
+    FixedMenu
   }
 }
 </script>

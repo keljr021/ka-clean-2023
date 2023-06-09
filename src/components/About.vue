@@ -34,10 +34,10 @@ export default {
 <style scoped lang="scss">
 .about {
     position: relative; 
-    height: 100vh;
     width: 100%;
     background-image: url('@/assets/cleaning-supply-wood.jpg');
     background-size: cover;
+    background-position: center;
     color: white;
     z-index: 1;
 

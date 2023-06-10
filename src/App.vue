@@ -7,20 +7,20 @@
   <Footbar />
   <FixedMenu @open-form="openContactForm" />
 
-  <v-dialog v-model="openContactModal" width="1000" scrollable persistent>
+  <v-dialog v-model="openContactModal" width="80vw" scrollable persistent>
       <v-card>
         <v-container>
           <v-row class="justify-space-between">
             <v-col class="text-right">
-              <v-btn variant="text" fab flat @click="window.open('https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?usp=pp_url','_blank')">
-                <v-icon>fa-regular fa-window-maximize</v-icon>
+              <v-btn fab flat href="https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?usp=pp_url" target="_blank">
+                <v-icon>fa-solid fa-up-right-from-square</v-icon>
                 <v-tooltip
                   activator="parent"
                   location="bottom">
                     Open Form in new window
                 </v-tooltip>
               </v-btn>
-              <v-btn variant="text" fab flat @click="openContactModal = false">
+              <v-btn fab flat @click="openContactModal = false">
                 <v-icon>fas fa-xmark</v-icon>
                 <v-tooltip
                   activator="parent"
@@ -49,13 +49,12 @@ import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import Footbar from './components/Footbar.vue'
 import FixedMenu from './components/FixedMenu.vue'
-import { useDisplay } from 'vuetify'
 
 export default {
   name: 'app',
   data() {
     return {
-      openContactModal: true
+      openContactModal: false
     }
   },
   methods: {
@@ -64,13 +63,13 @@ export default {
       if(el) el.scrollIntoView({ behavior: 'smooth', inline: 'start' });
     },
     openContactForm() {
-      const { mobile } = useDisplay();
-
-      if (mobile) {
+      let onMobileOrTablet = this.$vuetify.display.mdAndDown;
+      if (onMobileOrTablet) {
+        this.openContactModal = false;
         window.open('https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?usp=pp_url','_blank')
       }
       else {
-        this.openContactModal = !this.openContactModal;
+        this.openContactModal = true;
       }
     }
   },

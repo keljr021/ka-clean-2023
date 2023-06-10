@@ -4,11 +4,11 @@
            <Transition name="slide-fade" mode="out-in">
             <div class="closed py-0 pl-3 my-1" v-if="openMenu">
                 <v-btn-group>
-                    <v-btn class="with-border" @click="openLink('tel:9106335896')">
+                    <v-btn class="with-border" href="tel:9106335896">
                         <v-icon class="px-5">fas fa-mobile-screen-button</v-icon>
                         (910) 633-5896
                     </v-btn>
-                    <v-btn class="with-border" @click="openLink('mailto:kaclean2020@gmail.com')">
+                    <v-btn class="with-border" href="mailto:kaclean2020@gmail.com">
                         <v-icon class="px-5">fas fa-envelope</v-icon>
                         kaclean2020@gmail.com
                     </v-btn>

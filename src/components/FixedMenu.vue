@@ -1,7 +1,7 @@
 <template>
     <div class="menu">
         <!-- Mobile menu -->
-        <div class="menu-box" v-if="$vuetify.display.mdAndDown">
+        <div class="menu-box" v-if="$vuetify.display.mobile">
             <v-menu transition="slide-x-reverse-transition">
                 <template v-slot:activator="{ props }">
                     <v-btn v-bind="props" flat>

@@ -2,7 +2,7 @@
     <div class="navbar">
 
         <!-- Mobile Navigation -->
-        <div class="nav w-100" :class="{'show': showNav }" v-if="$vuetify.display.smAndDown">
+        <div class="nav w-100" :class="{'show': showNav }" v-if="$vuetify.display.mobile">
             <v-row class="align-center pl-2 pr-4">
                 <v-col cols="9" class="nav-logo" @click="this.$emit('scrollTo', 'cta')">
                     <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
@@ -68,7 +68,7 @@ export default {
        }
     },
     mounted() {
-        if (!this.$vuetify.display.xs) {
+        if (!this.$vuetify.display.mobile) {
             this.checkToShowNavbar();
             window.addEventListener('scroll', this.checkToShowNavbar)
         } else {
@@ -76,7 +76,7 @@ export default {
         }
     },
     beforeUnmount () {
-        if (!this.$vuetify.display.xs)
+        if (!this.$vuetify.display.mobile)
             window.removeEventListener('scroll', this.checkToShowNavbar)
     },
 }

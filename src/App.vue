@@ -5,7 +5,7 @@
   <About />
   <Contact @scroll-to="scrollTo" @open-form="openContactForm"/>
   <Footbar />
-  <FixedMenu />
+  <FixedMenu @open-form="openContactForm" />
 </template>
 
 <script>

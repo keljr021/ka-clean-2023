@@ -1,7 +1,7 @@
 <template>
     <div class="menu">
        <div class="menu-box">
-            <div class="closed py-0 px-3 my-1" v-if="openMenu">
+            <div class="closed py-0 pl-3 my-1" v-if="openMenu">
                 <v-btn-group>
                     <v-btn class="with-border" @click="openLink('tel:9106335896')">
                         <v-icon class="px-5">fas fa-mobile-screen-button</v-icon>
@@ -34,7 +34,7 @@ export default {
     name: 'FixedMenu',
     data() {
         return {
-            openMenu: true 
+            openMenu: false 
         }
     },
     emits: [

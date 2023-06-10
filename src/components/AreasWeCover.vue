@@ -1,46 +1,51 @@
 <template>
     <div class="areas">
-        <v-container>
-            <v-row>
-                <v-col class="page-section-title py-6">Areas We Cover</v-col>
-            </v-row>
-            <v-row>
-                <v-col>
-                    <div>
-                        <p>K&A Morrisey Cleaning Services are located in <b>Clinton, NC.</b> We provide support to Sampson County and surrounding areas.</p>
-                        <p>Not located in our area? Feel free to contact us and one of our cleaning technicians will attempt to support you.</p>
-                    </div>
-                    <div>
-                        <div class="page-section-subtitle pt-12 pb-6">Buildings</div>
+        <v-lazy
+            :min-height="275"
+            :options="{ 'threshold': 0.75 }"
+            transition="scroll-y-reverse-transition">
+            <v-container>
+                <v-row>
+                    <v-col class="page-section-title py-6">Areas We Cover</v-col>
+                </v-row>
+                <v-row>
+                    <v-col>
                         <div>
-                            <v-row>
-                                <v-col>
-                                    <ul>
-                                        <li>Administrative Offices</li>
-                                        <li>Cafeterias</li>
-                                        <li>Clerical Offices</li>
-                                        <li>Government Facilities</li>
-                                        <li>Kitchens</li>
-                                    </ul>
-                                </v-col>
-                                <v-col>
-                                    <ul>
-                                        <li>Libraries</li>
-                                        <li>Locker Rooms</li>
-                                        <li>Medical Clinics</li>
-                                        <li>Meeting Rooms</li>
-                                        <li>Restrooms</li>
-                                    </ul>
-                                </v-col>
-                            </v-row>
+                            <p>K&A Morrisey Cleaning Services are located in <b>Clinton, NC.</b> We provide support to Sampson County and surrounding areas.</p>
+                            <p>Not located in our area? Feel free to contact us and one of our cleaning technicians will attempt to support you.</p>
                         </div>
-                    </div>
-                </v-col>
-                <v-col class="areas-map">
-                    <img src="../assets/north-carolina-county-map-sampson.png" alt="North Carolina Map with Sampson County highlighted" />
-                </v-col>
-            </v-row>
-        </v-container>
+                        <div>
+                            <div class="page-section-subtitle pt-12 pb-6">Buildings</div>
+                            <div>
+                                <v-row>
+                                    <v-col>
+                                        <ul>
+                                            <li>Administrative Offices</li>
+                                            <li>Cafeterias</li>
+                                            <li>Clerical Offices</li>
+                                            <li>Government Facilities</li>
+                                            <li>Kitchens</li>
+                                        </ul>
+                                    </v-col>
+                                    <v-col>
+                                        <ul>
+                                            <li>Libraries</li>
+                                            <li>Locker Rooms</li>
+                                            <li>Medical Clinics</li>
+                                            <li>Meeting Rooms</li>
+                                            <li>Restrooms</li>
+                                        </ul>
+                                    </v-col>
+                                </v-row>
+                            </div>
+                        </div>
+                    </v-col>
+                    <v-col class="areas-map">
+                        <img src="../assets/north-carolina-county-map-sampson.png" alt="North Carolina Map with Sampson County highlighted" />
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-lazy>
     </div>
 </template>
 

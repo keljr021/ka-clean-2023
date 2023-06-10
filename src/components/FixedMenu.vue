@@ -1,6 +1,7 @@
 <template>
     <div class="menu">
-       <div class="menu-box">
+        <div class="menu-box">
+           <Transition name="slide-fade" mode="out-in">
             <div class="closed py-0 pl-3 my-1" v-if="openMenu">
                 <v-btn-group>
                     <v-btn class="with-border" @click="openLink('tel:9106335896')">
@@ -18,13 +19,15 @@
                     <v-btn @click="toggleMenu">
                         <v-icon class="px-5">fas fa-xmark</v-icon>
                     </v-btn>
-
                 </v-btn-group>
             </div>
-            <div class="open pa-3" v-else @click="toggleMenu">
-                <v-icon class="px-5">fa-regular fa-comment-dots</v-icon>
-                Contact Us
+            <div class="open pa-3" v-else>
+                <v-btn flat @click="toggleMenu">
+                    <v-icon class="px-5">fa-regular fa-comment-dots</v-icon>
+                    Contact Us
+                </v-btn>
             </div>
+        </Transition>
         </div>
     </div>
 </template>
@@ -56,7 +59,6 @@ export default {
     position: fixed;
     right: 0;
     bottom: 55px;
-    height: 70px;
     cursor: pointer;
     z-index: 1;
 
@@ -80,6 +82,20 @@ export default {
         .open, .closed {
             width: 100%;
             color: black
+        }
+
+        .slide-fade-enter-active {
+            transition: all 0.2s ease-out;
+        }
+
+        .slide-fade-leave-active {
+            transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+        }
+
+        .slide-fade-enter-from,
+        .slide-fade-leave-to {
+            transform: translateX(20px);
+            opacity: 0;
         }
     }
 }

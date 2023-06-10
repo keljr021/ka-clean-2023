@@ -9,11 +9,11 @@
                 :options="{ 'threshold': 0.75 }"
                 transition="scroll-y-reverse-transition">
                 <v-row>
-                    <v-col>
+                    <v-col cols="12" lg="6">
                         <p class="py-3"><b>Morrisey Cleaning Services</b> was first created by founders Thurman and Linda Morrisey. With their dedication and hard-work, both have garnished a positive reputation for their expertise in the janitorial business for decades.</p>
                         <p class="py-3">Today, their ethics and values were passed down to their son and his wife Kelvin and Amy Morrisey. Along with their hard-working technicians; they are equipped with the experience to take on any commercial cleaning service for their customers.</p>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" lg="6">
                         <div class="page-section-subtitle py-3">Why Choose Us?</div>
                         <ul class="py-3">
                             <li>North Carolina owned business local to Sampson County</li>

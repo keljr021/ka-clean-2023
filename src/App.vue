@@ -1,5 +1,5 @@
 <template>
-  <Navbar @scroll-to="scrollTo" />
+  <!-- <Navbar @scroll-to="scrollTo" /> -->
   <Cta @scroll-to="scrollTo" />
   <Services />
   <About />

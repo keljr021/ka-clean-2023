@@ -9,7 +9,7 @@
                     <v-col class="page-section-title py-6">Areas We Cover</v-col>
                 </v-row>
                 <v-row>
-                    <v-col>
+                    <v-col cols="12" lg="6">
                         <div>
                             <p>K&A Morrisey Cleaning Services are located in <b>Clinton, NC.</b> We provide support to Sampson County and surrounding areas.</p>
                             <p>Not located in our area? Feel free to contact us and one of our cleaning technicians will attempt to support you.</p>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </v-col>
-                    <v-col class="areas-map">
+                    <v-col cols="12" lg="6" class="areas-map">
                         <img src="../assets/north-carolina-county-map-sampson.png" alt="North Carolina Map with Sampson County highlighted" />
                     </v-col>
                 </v-row>
@@ -68,5 +68,12 @@ export default {
 
 .areas-map img {
     height: 275px;
+}
+
+@media all and (max-width: 768px) {
+    .areas-map img {
+        width: 100%;
+        height: auto;
+    }
 }
 </style>

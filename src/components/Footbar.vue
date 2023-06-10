@@ -1,6 +1,6 @@
 <template>
     <div class="footbar py-1 my-0 px-5">
-        <div class="text-right">Website provided by <a href="http://kelvin-m.com" target="_blank">Kelvin Morrisey Jr.</a></div>
+        <div class="text-center text-right-lg">Website provided by <a href="http://kelvin-m.com" target="_blank">Kelvin Morrisey Jr.</a></div>
     </div>
 </template>
 

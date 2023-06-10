@@ -1,5 +1,5 @@
 <template>
-    <div class="footbar px-4">
+    <div class="footbar py-1 my-0 px-5">
         <div class="text-right">Website provided by <a href="http://kelvin-m.com" target="_blank">Kelvin Morrisey Jr.</a></div>
     </div>
 </template>
@@ -14,11 +14,12 @@ export default {
 .footbar {
     height: 30px;
     background: black;
-    color: #666;
+    font-size: 12px;
+    color: #999;
 
     a {
         text-decoration: none;
-        color: #666;
+        color: #999;
 
         &:hover {
             color: #ccc;

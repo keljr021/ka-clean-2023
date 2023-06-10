@@ -3,24 +3,27 @@
 
         <!-- Mobile Navigation -->
         <div class="nav w-100" :class="{'show': showNav }" v-if="$vuetify.display.smAndDown">
-            <v-row class="align-center justify-space-between">
-                <v-col cols="8" class="nav-logo" @click="this.$emit('scrollTo', 'cta')">
+            <v-row class="align-center pl-2 pr-4">
+                <v-col cols="9" class="nav-logo" @click="this.$emit('scrollTo', 'cta')">
                     <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
                 </v-col>
-                <v-col cols="4" class="text-right">
-                    <v-icon @click.stop="toggleNavDrawer">mdi-menu</v-icon>
-                    <v-navigation-drawer v-model="showNavDrawer" location="right">
-                        <v-list-item>
-                            <template v-slot:append>
-                                <v-icon @click.stop="toggleNavDrawer">mdi-close</v-icon>
-                            </template>
-                        </v-list-item>
-                        <v-list density="compact" nav>
-                            <v-list-item title="Services" value="services" @click.stop="this.$emit('scrollTo', navItem.className);toggleNavDrawer()"></v-list-item>
+                <v-col cols="3" class="text-right">
+                    <v-btn size="large" id="menu" flat>
+                        <v-icon class="text-right">fa-solid fa-bars</v-icon>
+                    </v-btn>
+                    <v-menu activator="#menu" transition="slide-x-reverse-transition">
+                        <v-list>
+                            <v-list-item @click="this.$emit('scrollTo', 'services')">Services</v-list-item>
+                            <v-list-item @click="this.$emit('scrollTo', 'areas')">Areas We Cover</v-list-item>
+                            <v-list-item @click="this.$emit('scrollTo', 'about')">About</v-list-item>
+                            <v-list-item @click="this.$emit('scrollTo', 'contact')">Contact</v-list-item>
                         </v-list>
-                    </v-navigation-drawer>
+                    </v-menu>
+                   
                 </v-col>
             </v-row>
+
+
         </div>
 
         <!-- Tablet/Desktop navigation -->
@@ -30,10 +33,10 @@
                     <img src="../assets/logo-color.png" alt="K&A Morrisey Cleaning Services" />
                 </v-col>
                 <v-col cols="9" class="text-right">
-                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'services');toggleNavDrawer()">Services</span>
-                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'areas');toggleNavDrawer()">Areas We Cover</span>
-                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'about');toggleNavDrawer()">About</span>
-                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'contact');toggleNavDrawer()">Contact</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'services')">Services</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'areas')">Areas We Cover</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'about')">About</span>
+                    <span class="nav-item" @click.stop="this.$emit('scrollTo', 'contact')">Contact</span>
                 </v-col>
             </v-row>
         </div>
@@ -45,17 +48,13 @@ export default {
     name: 'Navbar',
     data() {
         return {
-            showNav: false,
-            showNavDrawer: false
+            showNav: false
         };
     },
     emits: [
         'scrollTo'
     ],
     methods: {
-        toggleNavDrawer() {
-            this.showNavDrawer = !this.showNavDrawer;
-        },
         checkToShowNavbar() {
             // Get the current scroll position
             const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;

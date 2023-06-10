@@ -93,8 +93,14 @@ export default {
 
 @media all and (max-width: 768px) {
     .page-section {
-        padding: 20px 0;
+        padding: 80px 20px 0;
     }
+
+    .cta-background {
+        height: 100vh;
+        object-fit: cover;
+    }
+    
     .cta{
         .cta-logo img {
             width: calc(100% - 30px);

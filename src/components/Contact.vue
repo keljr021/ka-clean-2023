@@ -14,21 +14,21 @@
                     <p class="py-3">Three ways to contact us:</p>
 
                     <v-row class="py-3">
-                        <v-col cols="1" class="text-center"><v-icon>fas fa-mobile-screen-button</v-icon></v-col>
+                        <v-col cols="1" class="text-center" v-if="$vuetify.display.lgAndUp"><v-icon>fas fa-mobile-screen-button</v-icon></v-col>
                         <v-col cols="10" offset="1">
                             <b>Call or Text Us: </b><br />
                             <a href="tel:9106335896">(910) 633-5896</a>
                         </v-col>
                     </v-row>
                     <v-row class="py-3">
-                        <v-col cols="1" class="text-center"><v-icon>fas fa-envelope</v-icon></v-col>
+                        <v-col cols="1" class="text-center" v-if="$vuetify.display.lgAndUp"><v-icon>fas fa-envelope</v-icon></v-col>
                         <v-col cols="10" offset="1">
                             <b>Email Us: </b><br />
                             <a href="mailto:kaclean2020@gmail.com">kaclean2020@gmail.com</a>
                         </v-col>
                     </v-row>
                     <v-row class="py-3">
-                        <v-col cols="1" class="text-center"><v-icon>fas fa-file-lines</v-icon></v-col>
+                        <v-col cols="1" class="text-center" v-if="$vuetify.display.lgAndUp"><v-icon>fas fa-file-lines</v-icon></v-col>
                         <v-col cols="10" offset="1">
                             Fill out our <b>Contact Form </b><br />
                             <div class="py-8">
@@ -70,12 +70,6 @@ export default {
     
     iframe {
         width: 100%;
-    }
-}
-
-@media all and (min-width: 768px) and (max-width: 1023px) {
-    .contact {
-
     }
 }
 </style>

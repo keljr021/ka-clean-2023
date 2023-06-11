@@ -11,16 +11,16 @@
                         <p class="py-2">We're a family-owned business of professional cleaning technicians. With over twenty years experience, K&A Morrisey Cleaning Services have the expertise on all commercial cleaning needs.</p>
                         <p class="py-2">There are no jobs too big or too small!</p>
                     </div>
-                    <div class="cta-links py-8 pl-2" v-if="!this.$vuetify.display.mobile">
+                    <div class="cta-links py-8 pl-2">
                         <v-row class="justify-space-between">
                             <v-col cols="12" lg="4">
-                                <div class="text-center px-2" @click="this.$emit('scrollTo', 'services')">Services</div>
+                                <div class="text-lg-center text-left px-2" @click="this.$emit('scrollTo', 'services')">Services</div>
                             </v-col>
                             <v-col cols="12" lg="4">
-                                <div class="text-center px-2" @click="this.$emit('scrollTo', 'areas')">Areas We Serve</div>
+                                <div class="text-lg-center text-left px-2" @click="this.$emit('scrollTo', 'areas')">Areas We Serve</div>
                             </v-col>
                             <v-col cols="12" lg="4">
-                                <div class="text-center px-2" @click="this.$emit('scrollTo', 'about')">About</div>
+                                <div class="text-lg-center text-left px-2" @click="this.$emit('scrollTo', 'about')">About</div>
                             </v-col>
                         </v-row>
                     </div>
@@ -65,7 +65,7 @@ export default {
 
 .cta {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: rgba(29, 35, 82, 0.65);
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -105,6 +105,10 @@ export default {
         .cta-logo img {
             width: calc(100% - 30px);
             height: auto;
+        }
+
+        .cta-text p {
+            line-height: 1.75em;
         }
     }
 }

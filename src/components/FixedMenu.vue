@@ -5,7 +5,7 @@
             <v-menu transition="slide-x-reverse-transition">
                 <template v-slot:activator="{ props }">
                     <v-btn v-bind="props" flat>
-                        <v-icon class="px-5">fa-regular fa-comment-dots</v-icon>
+                        <v-icon class="px-5">fas fa-ellipsis</v-icon>
                     </v-btn>
                 </template>
                 <v-list>
@@ -47,9 +47,9 @@
                         </v-btn>
                     </v-btn-group>
                 </div>
-                <div class="open pa-lg-3" v-else>
+                <div class="open py-lg-1 px-lg-3" v-else>
                     <v-btn flat @click="toggleMenu">
-                        <v-icon class="px-5">fa-regular fa-comment-dots</v-icon>
+                        <v-icon class="px-5">fas fa-ellipsis</v-icon>
                         <span>Contact Us</span>
                     </v-btn>
                 </div>

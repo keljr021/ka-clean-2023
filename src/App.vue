@@ -34,7 +34,7 @@
 
           <v-card-text>
             <div class="py-3 text-center">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?embedded=true" width="900" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc24Cj9SKgc6MBJKPGraEFBsiimAHjIG25WsnqJUjXdGMxXvw/viewform?embedded=true" width="900" height="1600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
           </v-card-text>
         </v-card>
@@ -66,7 +66,7 @@ export default {
       let onMobileOrTablet = this.$vuetify.display.mdAndDown;
       if (onMobileOrTablet) {
         this.openContactModal = false;
-        window.open('https://docs.google.com/forms/d/e/1FAIpQLScwGjQDZYL1k9-IUAPa-XeUbgPFyN-u5_vPcvbOh9i0HeH8XA/viewform?usp=pp_url','_blank')
+        window.open('https://forms.gle/XRK5Ac1xRLuowPrS7','_blank')
       }
       else {
         this.openContactModal = true;

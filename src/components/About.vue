@@ -5,7 +5,7 @@
                 <v-col class="page-section-title py-6">About</v-col>
             </v-row>
             <v-lazy
-                :min-height="275"
+                :min-height="200"
                 :options="{ 'threshold': 0.75 }"
                 transition="scroll-y-reverse-transition">
                 <v-row>

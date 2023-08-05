@@ -6,7 +6,7 @@
         </v-row>
 
         <v-lazy
-                :min-height="300"
+                :min-height="200"
                 :options="{ 'threshold': 0.75 }"
                 transition="scroll-y-reverse-transition">
             <v-row>

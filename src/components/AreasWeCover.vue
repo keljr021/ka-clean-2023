@@ -1,7 +1,7 @@
 <template>
     <div class="areas">
         <v-lazy
-            :min-height="275"
+            :min-height="200"
             :options="{ 'threshold': 0.75 }"
             transition="scroll-y-reverse-transition">
             <v-container>
